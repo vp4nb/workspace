@@ -1,0 +1,17 @@
+package class9;
+
+import java.util.Scanner;
+
+public class ExceptionScenario {
+
+	public static void main(String[] args) throws ArithmeticException {
+		Scanner in=new Scanner(System.in);
+		int a=in.nextInt();
+		int b=in.nextInt();
+		int c=a/b;
+		System.out.println("result: "+c);
+		// TODO Auto-generated method stub
+
+	}
+
+}

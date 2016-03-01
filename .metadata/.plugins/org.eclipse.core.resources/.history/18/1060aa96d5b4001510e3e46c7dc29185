@@ -1,0 +1,29 @@
+package class5;
+
+import java.util.Scanner;
+
+public class SampleClass {
+
+	public static void main(String[] args) {
+		String str1,str2,str3;
+		int id1,id2,id3;
+		Scanner in=new Scanner(System.in);
+		System.out.println("Enter the String: ");
+		str1=in.next();
+		System.out.println("Enter the id: ");
+		id1=in.nextInt();
+		
+		System.out.println("Enter the String: ");
+		str2=in.next();
+		System.out.println("Enter the id: ");
+		id2=in.nextInt();
+		
+		System.out.println("Enter the String: ");
+		str3=in.next();
+		System.out.println("Enter the id: ");
+		id3=in.nextInt();
+		// TODO Auto-generated method stub
+
+	}
+
+}

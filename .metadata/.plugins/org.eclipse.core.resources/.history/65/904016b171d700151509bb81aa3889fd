@@ -1,0 +1,5 @@
+package advance.model;
+
+public class Student {
+
+}

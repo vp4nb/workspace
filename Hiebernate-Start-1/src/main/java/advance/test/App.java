@@ -1,0 +1,37 @@
+package advance.test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class App {
+
+	public static void main(String[] args) {
+		Configuration cfg = new Configuration().configure("hibernate.cfg.xml");
+	      @SuppressWarnings("deprecation")
+		SessionFactory sf = cfg.buildSessionFactory();
+	      Session session = sf.openSession();
+	      Transaction transaction = session.beginTransaction();
+	      Employee e=new Employee();
+	      Address ad=new Address();
+	      ad.setName("virginia");
+	      Address ad1=new Address();
+	      ad1.setName("new york");
+	      Set<Address> s=new HashSet<Address>();
+	      s.add(ad);
+	      s.add(ad1);
+	      e.setNane("ram");
+	      e.setEmail("ram@kri.com");
+	      e.setAddress(s);
+	      session.save(ad);
+	      session.save(ad1);
+	      session.save(e);
+	      transaction.commit();
+	      session.close();
+	      sf.close();
+	}
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping>
+ 
+ 	<class name="com.vk.advance.orm.isarelation.Employee" table="EMPLOYEE" schema="bellschema">
+ 		<id name="empId" column="EMPLOYEE_ID" >
+ 			<generator class="increment"/>
+ 		</id>
+ 		<discriminator column="EMPLOYEE_TYPE" type="string"/>
+ 		<property name="empName" column="EMPLOYEE_NAME"/>
+ 		<property name="empDept" column="EMPLOYEE_DEPT"/>
+ 		<property name="empSalary" column="EMPLOYEE_SALARY"/>
+ 		
+ 		<union-subclass name="com.vk.advance.orm.isarelation.SoftwareEmployee" table="SOFTWARE">
+ 			<property name="softwareTools" column="SOFTWARE_TOOLS"/> 		
+ 		</union-subclass>
+ 		<union-subclass name="com.vk.advance.orm.isarelation.HardwareEmployee" table="HARDWARE">
+ 			<property name="workingHours" column="WORKING_HOURS"/> 		
+ 		</union-subclass>
+ 	 </class>
+  
+ </hibernate-mapping>

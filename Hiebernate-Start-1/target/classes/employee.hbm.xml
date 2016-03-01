@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping>
+ 
+ 	<class name="com.vk.advance.Employee" table="Employee" schema="public">
+ 		<cache usage="read-only"/>
+ 		<id name="employeeId" column="Emp_Id">
+ 		<generator class="increment"></generator>
+ 		</id>
+ 		<property name="employeeName" column="Emp_Name" />
+ 		<property name="employeeDept" column="Emp_Dept"/>
+ 		<property name="salary" column="Emp_Salary"/>
+ 	</class>
+ 
+ </hibernate-mapping>

@@ -1,0 +1,9 @@
+com\vk\control\SelectTypeControl.class
+com\vk\repository\RetriveDetails.class
+com\vk\service\SelectTypeService.class
+com\vk\model\RegisterModel.class
+com\vk\repository\DBConnection.class
+com\vk\service\RegisterService.class
+com\vk\control\RegisterControl.class
+com\vk\repository\CheckDuplicates.class
+com\vk\repository\TableInsert.class

@@ -1,0 +1,23 @@
+package class9;
+
+import java.util.Scanner;
+
+public class ExceptionScenario {
+
+	public static void main(String[] args) {
+		Scanner in=new Scanner(System.in);
+		System.out.println("Enter number a:");
+		int a=in.nextInt();
+		int b;
+		do
+		{
+		System.out.println("Enter number b: ");
+		b=in.nextInt();
+		int c=a/b;
+		}while(b==0);
+		System.out.println("result: "+c);
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,85 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html height="100%" width="100%">
+<head>
+<title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style type="text/css">
+	html,body,.container{
+        height:90%;
+    }
+    .tablewrapper{
+        display:table;
+        height:100%;
+    }
+    .tablerowwrapper{
+        display:table-row;
+    }
+    .sidebar,.content{
+        display:table-cell;
+        height:100%;
+        float:none;
+    }
+    .pad_top15{
+        padding-top:15px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container" style="background-color: blue">
+<div class="row">
+    <div class="col-md-12">
+        <div class="page-header">
+ 			<tiles:insertAttribute name="header"/>
+ 		</div>
+ 	</div>
+ </div>
+  <div class="row tablewrapper">
+    <div class="col-md-12 tablerowwrapper">
+        <div class="col-md-3 sidebar pad_top15">
+        	<tiles:insertAttribute name="menu"/>
+        </div>
+        <div class="col-md-9 content" style="background-color: blue; align:center">
+            <div class="col-md-12">
+                <div class="col-md-12">
+                    <tiles:insertAttribute name="title"/>
+                </div>
+                <div class="col-md-12">
+                    <tiles:insertAttribute name="body"/>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+ <div class="row">
+    <div class="col-md-12">
+        <div class="page-footer">
+            <h3 align="center">Page-footer</h3>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+<%-- <div class="container">
+<div class="table-responsive">
+<table class="table">
+<tr>
+<td colspan="2" height="20%" align="center" style="background-color: red"><tiles:insertAttribute name="header"/></td></tr>
+<tr height="70%" ><td width="20%" style="background-color: purple"><tiles:insertAttribute name="menu"/></td>
+	<td style="background-color: orange; align: center" width="80%"><tiles:insertAttribute name="title"/>
+		<tiles:insertAttribute name="body"/></td></tr>
+<tr><td colspan="2" height="10%"><tiles:insertAttribute name="footer"/></td></tr>
+</table>
+</div>
+</div> --%>
+</body>
+</html>

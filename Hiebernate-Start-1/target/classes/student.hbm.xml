@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+    <class name="com.vk.advance.Student" table="STUDENT" schema="public">
+      <id name="id">
+     <generator class="seqhilo"></generator>
+    <!-- <generator class="sequence">
+        <param name="sequence">hibernate_sequence1</param>
+    </generator> -->
+      </id>
+      <property name="name"/>
+      <property name="date"/>
+      <property name="address"/>
+    </class>
+</hibernate-mapping>

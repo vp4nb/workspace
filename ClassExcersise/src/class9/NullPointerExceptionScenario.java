@@ -1,0 +1,24 @@
+package class9;
+
+public class NullPointerExceptionScenario {
+	public void mtd1()
+	{
+		System.out.println("mtd1");
+	}
+	static NullPointerExceptionScenario npes;
+	public static void main(String[] args) {
+		
+		try
+		{
+		npes.mtd1();
+		}
+		catch(Exception e)
+		{
+			System.out.println("null pointer");
+		}
+		System.out.println("afetr handling");
+		// TODO Auto-generated method stub
+
+	}
+
+}

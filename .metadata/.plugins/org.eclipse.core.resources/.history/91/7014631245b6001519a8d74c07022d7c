@@ -1,0 +1,13 @@
+package class6;
+
+
+public class Sample {
+	  public static void main(String args[]) {
+		  String[] colors = {"red", "orange", "yellow", "green", "blue", "indigo", "violet"};
+		    
+		    for(String s: colors){
+		      System.out.println(s);
+		      
+		    }
+	  }
+	}

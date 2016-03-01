@@ -1,0 +1,49 @@
+package advance.controller;
+
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import advance.model.Student;
+import advance.model.UpdateStudent;
+
+@RestController
+@RequestMapping(value="/hello")
+public class AppController {
+	Logger logger=LoggerFactory.getLogger(AppController.class);
+	
+	@RequestMapping(method=RequestMethod.GET)
+	public String hello(){
+		logger.info("i am inside hello");
+		logger.debug("i am inside hello debig");
+		logger.warn("i am inside hello warn");
+		logger.error("i am inside hello error");
+		return "hello world!!!!!";
+	}
+	@RequestMapping(value="/student", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	public Student helloStudent()
+	{
+		Student s=new Student();
+		s.setName("venkat");
+		s.setCourse("java");
+		s.setFee(100.20);
+		return s;
+	}
+	
+	@RequestMapping(value="/student/id/{id}", method=RequestMethod.POST, consumes= MediaType.APPLICATION_JSON_VALUE,
+			produces= MediaType.APPLICATION_JSON_VALUE)
+	public UpdateStudent postStudent(@PathVariable Integer id, @RequestBody Student s)
+	{
+		UpdateStudent us=new UpdateStudent();
+		us.setId(id);
+		us.setName(s.getName());
+		us.setAddress("gugugugug");
+		return us;
+	}
+}

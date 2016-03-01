@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+ 
+<tiles-definitions>
+     <definition name="base.defination" template="/WEB-INF/pages/layout.jsp">
+         <put-attribute name="header" value="/WEB-INF/pages/header.jsp"/>
+         <put-attribute name="menu" value="/WEB-INF/pages/menu.jsp"/>
+         <put-attribute name="body" value=""/>
+         <put-attribute name="footer" value="/WEB-INF/pages/footer.jsp" />
+     </definition>
+ 
+     <definition name="student-login" extends="base.defination">
+         <put-attribute name="body" value="/WEB-INF/menupages/student-login.jsp"/>
+     </definition>
+ 
+    <definition name="student-welcome" extends="base.defination">
+        <put-attribute name="body" value="/WEB-INF/menupages/student-welcome.jsp"/>
+    </definition>
+    
+    <definition name="student-register" extends="base.defination">
+        <put-attribute name="body" value="/WEB-INF/menupages/student-register.jsp"/>
+    </definition>
+    
+    <definition name="student-registration-success" extends="base.defination">
+        <put-attribute name="body" value="/WEB-INF/menupages/student-registration-success.jsp"/>
+    </definition>
+    
+    <definition name="faculty-login" extends="base.defination">
+         <put-attribute name="body" value="/WEB-INF/menupages/faculty-login.jsp"/>
+     </definition>
+ 
+    <definition name="faculty-welcome" extends="base.defination">
+         <put-attribute name="body" value="/WEB-INF/menupages/faculty-welcome.jsp"/>
+    </definition>
+    
+    <definition name="faculty-register" extends="base.defination">
+       <put-attribute name="body" value="/WEB-INF/menupages/faculty-register.jsp"/>
+    </definition>
+    
+    <definition name="faculty-registration-success" extends="base.defination">
+       <put-attribute name="body" value="/WEB-INF/menupages/faculty-registration-success.jsp"/>
+    </definition>
+    
+    <definition name="home" extends="base.defination">
+       <put-attribute name="body" value="/WEB-INF/pages/home.jsp"/>
+    </definition>
+    
+    <definition name="login" extends="base.defination">
+       <put-attribute name="body" value="/WEB-INF/pages/login.jsp"/>
+    </definition>
+    <definition name="register" extends="base.defination">
+        <put-attribute name="body" value="/WEB-INF/pages/register.jsp"/>
+    </definition>
+    <definition name="about" extends="base.defination">
+         <put-attribute name="body" value="/WEB-INF/pages/about.jsp"/>
+    </definition>
+    <definition name="contact" extends="base.defination">
+       <put-attribute name="body" value="/WEB-INF/pages/contact.jsp"/>
+    </definition>
+    
+    
+   </tiles-definitions>

@@ -1,0 +1,36 @@
+package com.bellinfo.faculty.repository;
+
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.bellinfo.faculty.model.FacultyLogin;
+
+@Repository
+public class FacultyRepository {
+
+	@Autowired
+	SessionFactory sessionFactory;
+	private Session getSession(){
+		return sessionFactory.getCurrentSession();
+	}
+	public int saveFaculty(FacultyLogin flogin)
+	{
+		return (Integer) getSession().save(flogin);
+	}
+	public List<FacultyLogin> getFaculty()
+	{
+		Criteria cr=getSession().createCriteria(FacultyLogin.class);
+		return cr.list();
+	}
+	public void updateFaculty(FacultyLogin flogin)
+	{
+		getSession().beginTransaction();
+		getSession().saveOrUpdate(flogin);
+		getSession().getTransaction().commit();
+	}
+}

@@ -1,0 +1,11 @@
+package class6;
+
+
+public class Sample {
+	  public static void main(String args[]) {
+		  String name = "Java";
+		    int length = name.length();
+
+		    System.out.println("Length = " + length);
+	  }
+	}

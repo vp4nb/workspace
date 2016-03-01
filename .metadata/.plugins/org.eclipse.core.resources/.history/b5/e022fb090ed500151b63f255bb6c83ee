@@ -1,0 +1,23 @@
+package com.vk.advance;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class FirstLevelCache {
+
+	public static void main(String[] args) {
+		
+		Configuration cfg=new Configuration().configure("hiebernate.cfg.xml");
+		SessionFactory sf=cfg.buildSessionFactory();
+		Session s=sf.openSession();
+		Transaction tr=s.beginTransaction();
+		
+		
+		
+		tr.commit();
+		s.close();
+		sf.close();
+	}
+}

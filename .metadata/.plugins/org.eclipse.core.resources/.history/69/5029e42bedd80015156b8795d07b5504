@@ -1,0 +1,9 @@
+package advance;
+
+public class BankServiceImpl {
+
+	public int transfer(String fromAcct, String toAcct, int amount)
+	{
+		return amount;
+	}
+}

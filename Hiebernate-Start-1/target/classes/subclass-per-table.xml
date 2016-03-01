@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping>
+ <class name="com.vk.advance.orm.into.Payment" table="PAYMENT" schema="bellschema">
+ 	<id name="paymentId">
+ 		<generator class="increment"/>
+ 	</id>
+ 	<property name="amount"/>
+ 	
+ 	<joined-subclass name="com.vk.advance.orm.into.CreditCard" table="Credit_Card" schema="bellschema">
+ 		<key column="paymentId"/>
+ 		<property name="cardNumber"/>
+ 		<property name="cvv"></property>
+ 	</joined-subclass>
+ 	
+ </class>
+ </hibernate-mapping>

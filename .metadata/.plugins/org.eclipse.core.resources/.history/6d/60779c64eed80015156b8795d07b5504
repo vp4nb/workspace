@@ -1,0 +1,10 @@
+package advance;
+
+import org.aopalliance.aop.Advice;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class LogBefore implements Advice {
+	Logger log=LoggerFactory.getLogger(LogBefore.class);
+	
+}

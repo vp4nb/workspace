@@ -1,0 +1,44 @@
+package Practice;
+import java.math.BigDecimal;
+import java.util.*;
+class Sample{
+
+    public static void main(String []argh)
+    {
+        //Input
+        Scanner sc= new Scanner(System.in);
+        int n=sc.nextInt();
+        String []s=new String[n+2];
+        for(int i=0;i<n;i++)
+        {
+            s[i]=sc.next();
+        }
+
+        //Write your code here
+        String ss;
+      for(int i=0;i<n;i++)
+          {
+          BigDecimal A=new BigDecimal(s[i]);
+          for(int j=0;j<n;j++)
+              {
+              
+              BigDecimal B=new BigDecimal(s[i]);
+              if(A.compareTo(B)<0)
+                  {
+                  ss=s[i];
+                  s[i]=s[j];
+                  s[j]=ss;
+              }
+          }
+      }
+      
+        //Output
+        for(int i=0;i<n;i++)
+        {
+            System.out.println(s[i]);
+        }
+
+    }
+
+
+}

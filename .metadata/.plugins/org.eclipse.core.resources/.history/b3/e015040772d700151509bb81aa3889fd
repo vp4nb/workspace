@@ -1,0 +1,8 @@
+package advance.model;
+
+public class Student {
+
+	String name;
+	String course;
+	Double fee;
+}

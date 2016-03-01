@@ -1,0 +1,5 @@
+2016-02-21 18:01:52,461 DEBUG [main] c.b.a.Loggerbefore [Loggerbefore.java : 15] ****I'm inside Loggerbefore
+2016-02-21 18:06:13,940 DEBUG [main] c.b.a.Loggerbefore [Loggerbefore.java : 15] ****I'm inside Loggerbefore
+2016-02-21 18:06:23,284 DEBUG [main] c.b.a.Loggerbefore [Loggerbefore.java : 15] ****I'm inside Loggerbefore
+2016-02-21 18:06:51,283 DEBUG [main] c.b.a.Loggerbefore [Loggerbefore.java : 15] ****I'm inside Loggerbefore*****
+2016-02-21 18:08:41,177 DEBUG [main] c.b.a.Loggerbefore [Loggerbefore.java : 15] ****I'm inside Loggerbefore*****

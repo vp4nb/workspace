@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+ 
+    <appender name="TIME_BASED_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>/logs/hellworld.log</file>
+         
+ 
+    </appender>
+ 
+    <logger name="advance.controller" level="debug"/>
+     
+ 
+    <root level="info">
+        <appender-ref ref="TIME_BASED_FILE" />
+        <appender-ref ref="STDOUT" />
+    </root>
+ 
+</configuration>

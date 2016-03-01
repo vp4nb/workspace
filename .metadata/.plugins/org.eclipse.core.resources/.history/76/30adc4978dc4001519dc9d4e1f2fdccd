@@ -1,0 +1,165 @@
+package com.bellinfo.advance.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Properties;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+
+import com.bellinfo.advance.modal.LoginDetails;
+import com.bellinfo.advance.modal.RegistrationDetails;
+
+public class RepositoryDAO {
+
+	Connection con = null;
+	public static final String CREATE_TABLE = "CREATE TABLE register ( fullname character varying(40) NOT NULL, email character varying(40) NOT NULL, username character varying(40) NOT NULL, password character varying(40) NOT NULL )";
+	public static final String INSERT_REGISTER = "INSERT INTO register (fullname, email, username, password) VALUES (?,?,?,?)";
+    public static final String SELECT_USER_INFO = "select fullname, email, username, password from register where username=? and password=?";
+    public static final String SELECT_USER_DUPLICATE_INFO = "select fullname,email,username, password from register where username=? and email=?";
+	public boolean createRegistration() {
+
+		boolean result = false;
+		Statement stmt = null;
+		try {
+			getDBConnection();
+			stmt = con.createStatement();
+
+			result = stmt.execute(CREATE_TABLE);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				stmt.close();
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return result;
+	}
+
+	public int saveRegistrationDetails(RegistrationDetails regDetails) {
+		int result = 0;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		String user=null;
+		String pass=null;
+		String fname=null;
+		String email=null;
+		try {
+			
+			getDBConnection();
+			
+			ps = con.prepareStatement(SELECT_USER_DUPLICATE_INFO);
+			ps.setString(1, regDetails.getUsername());
+			ps.setString(2, regDetails.getEmail());
+			rs = ps.executeQuery();
+			while(rs.next())
+			{
+				user=rs.getString("username");
+				pass=rs.getString("password");
+				email=rs.getString("email");
+				fname=rs.getString("fullname");
+			}
+			if(!(regDetails.getUsername().equals(user) && regDetails.getPassword().equals(pass)&& regDetails.getEmail().equalsIgnoreCase(email)&& regDetails.getFullname().equalsIgnoreCase(fname))){
+					
+			ps = con.prepareStatement(INSERT_REGISTER);
+			
+			ps.setString(1, regDetails.getFullname());
+			ps.setString(2, regDetails.getEmail());
+			ps.setString(3, regDetails.getUsername());
+			ps.setString(4, regDetails.getPassword());
+			result = ps.executeUpdate();
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				ps.close();
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return result;
+	}
+
+	public String[] extractUserDetails(LoginDetails details) {
+		 
+		boolean result = false;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		String pass = null;
+		String user = null;
+		String email=null;
+		String fname=null;
+		String[] name = new String[2];
+		try {
+			getDBConnection();
+			ps = con.prepareStatement(SELECT_USER_INFO);
+			ps.setString(1, details.getUsername());
+			ps.setString(2, details.getPassword());
+			rs = ps.executeQuery();
+			while(rs.next()){
+				
+				user = rs.getString("username");
+				pass = rs.getString("password");
+				email = rs.getString("email");
+				fname=rs.getString("fullname");
+			}
+			if(details.getUsername().equals(user) && details.getPassword().equals(pass)){
+				//req.setAttribute("email", email);
+				//req.setAttribute("fullname", fname);
+				
+				name[0]=email;
+				name[1]=fname;
+				result = true;
+				return name;
+			}
+			else{
+				result = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				ps.close();
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		System.out.println(name[0]);
+		return name;
+	}
+	
+	
+	private void getDBConnection() {
+		try {
+			Class.forName("org.postgresql.Driver");
+			System.out.println("PostgreSQL JDBC Driver Registered!");
+			// Connection connection = null;
+			con = DriverManager.getConnection(
+					"jdbc:postgresql://127.0.0.1:5432/postgres", "postgres",
+					"AZaz09$$");
+		} catch (SQLException e) {
+			System.out.println("Connection Failed");
+			e.printStackTrace();
+			return;
+		} catch (ClassNotFoundException e) {
+			System.out.println("Where is your PostgreSQL JDBC Driver? "
+					+ "Include in your library path!");
+			e.printStackTrace();
+			return;
+		}
+	}
+
+	
+}

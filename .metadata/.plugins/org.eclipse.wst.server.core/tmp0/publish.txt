@@ -1,0 +1,10 @@
+#Tomcat publish data
+#Sun Feb 21 19:13:06 EST 2016
+org.eclipse.jst.j2ee.server\:registration-spring=C\:\\apache-tomcat-7.0.67\\wtpwebapps\\registration-spring
+org.eclipse.jst.j2ee.server\:Project_online=C\:\\apache-tomcat-7.0.67\\wtpwebapps\\Project_online
+org.eclipse.jst.jee.server\:faculty=C\:\\apache-tomcat-7.0.67\\wtpwebapps\\faculty
+org.eclipse.jst.j2ee.server\:tiles-concept=C\:\\apache-tomcat-7.0.67\\wtpwebapps\\tiles-concept
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\venka\\.m2\\repository\\org\\springframework\\spring-web\\4.1.1.RELEASE\\spring-web-4.1.1.RELEASE.jar=C\:\\apache-tomcat-7.0.67\\wtpwebapps\\faculty\\WEB-INF\\lib\\spring-web-4.1.1.RELEASE.jar
+org.eclipse.jst.j2ee.server\:tiles-spring-assignment=C\:\\apache-tomcat-7.0.67\\wtpwebapps\\tiles-spring-assignment
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\venka\\.m2\\repository\\org\\springframework\\spring-web\\4.2.4.RELEASE\\spring-web-4.2.4.RELEASE.jar=C\:\\apache-tomcat-7.0.67\\wtpwebapps\\registration-spring\\WEB-INF\\lib\\spring-web-4.2.4.RELEASE.jar
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\venka\\.m2\\repository\\org\\springframework\\spring-web\\4.0.0.RELEASE\\spring-web-4.0.0.RELEASE.jar=C\:\\apache-tomcat-7.0.67\\wtpwebapps\\Project_online\\WEB-INF\\lib\\spring-web-4.0.0.RELEASE.jar

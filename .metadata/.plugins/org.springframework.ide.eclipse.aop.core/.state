@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="spring-assignment"/>
+<aop-project name="Project_online"/>
+<aop-project name="spring-ioc-xml"/>
+<aop-project name="spring mvc"/>
+<aop-project name="faculty"/>
+</aop-reference-model>

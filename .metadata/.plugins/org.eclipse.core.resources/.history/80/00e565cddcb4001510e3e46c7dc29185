@@ -1,0 +1,19 @@
+package class5;
+
+public class ArrayClass {
+
+	public static void main(String[] args) {
+		int[] a=new int[50];
+		int b[]=new int[50];
+		int []c=new int[]{1,2,6,5,8,7};
+		for(int i=0;i<50;i++)
+		{
+			System.out.print(a[i]);
+			System.out.print(b[i]);
+			System.out.println(c[i]);
+		}
+		// TODO Auto-generated method stub
+
+	}
+
+}

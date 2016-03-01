@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body bgcolor="blue" style="min-height:100%;min-width:100%;position:fixed">
+
+<table style="min-height:100%;min-width:100%" border="1">
+<tr min-width="100%">
+<td colspan="2" min-height="20%" align="center" style="background-color: red;float:top"><tiles:insertAttribute name="header"/></td></tr>
+<tr min-height="70%" min-width="100%" style="float:top"><td min-width="30%" style="background-color: #E37D10"><tiles:insertAttribute name="menu"/></td>
+	<td style="background-color: orange; align: center" min-width="70%">
+		<tiles:insertAttribute name="body"/></td></tr>
+<tr><td colspan="2" min-height="10%" min-width="100%" style="float:bottom"><tiles:insertAttribute name="footer"/></td></tr>
+</table>
+
+</body>
+</html>

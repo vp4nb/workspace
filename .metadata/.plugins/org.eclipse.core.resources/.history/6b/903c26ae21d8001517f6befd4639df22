@@ -1,0 +1,45 @@
+package advance.test;
+
+import java.util.Set;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="Employee")
+public class Employee {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
+	private String nane;
+	private String email;
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name="id")
+	private Set<Address> address;
+	
+	public Set<Address> getAddress() {
+		return address;
+	}
+	public void setAddress(Set<Address> address) {
+		this.address = address;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getNane() {
+		return nane;
+	}
+	public void setNane(String nane) {
+		this.nane = nane;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	
+}

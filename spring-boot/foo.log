@@ -1,0 +1,40 @@
+2016-02-19 22:12:30,124 INFO [main] a.App [StartupInfoLogger.java : 48] Starting App on DESKTOP-O7V8UDR with PID 2664 (C:\Users\venka\Desktop\workspace\spring-boot\target\classes started by venka in C:\Users\venka\Desktop\workspace\spring-boot)
+2016-02-19 22:12:30,127 DEBUG [main] a.App [StartupInfoLogger.java : 51] Running with Spring Boot v1.3.2.RELEASE, Spring v4.2.4.RELEASE
+2016-02-19 22:12:30,128 INFO [main] a.App [SpringApplication.java : 666] No active profile set, falling back to default profiles: default
+2016-02-19 22:12:30,459 DEBUG [background-preinit] o.j.logging [LoggerProviders.java : 160] Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2016-02-19 22:12:30,462 INFO [background-preinit] o.h.v.i.u.Version [Version.java : 17] HV000001: Hibernate Validator 5.2.2.Final
+2016-02-19 22:12:30,498 DEBUG [background-preinit] o.h.v.i.e.r.DefaultTraversableResolver [DefaultTraversableResolver.java : 70] Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2016-02-19 22:12:31,643 DEBUG [main] o.h.v.i.e.r.DefaultTraversableResolver [DefaultTraversableResolver.java : 70] Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2016-02-19 22:12:31,645 DEBUG [main] o.h.v.i.e.ConfigurationImpl [ConfigurationImpl.java : 156] Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2016-02-19 22:12:31,646 DEBUG [main] o.h.v.i.e.ConfigurationImpl [ConfigurationImpl.java : 178] Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2016-02-19 22:12:31,648 DEBUG [main] o.h.v.i.e.ConfigurationImpl [ConfigurationImpl.java : 192] Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy47
+2016-02-19 22:12:31,649 DEBUG [main] o.h.v.i.x.ValidationXmlParser [ValidationXmlParser.java : 91] Trying to load META-INF/validation.xml for XML based Validator configuration.
+2016-02-19 22:12:31,651 DEBUG [main] o.h.v.i.x.ResourceLoaderHelper [ResourceLoaderHelper.java : 47] Trying to load META-INF/validation.xml via user class loader
+2016-02-19 22:12:31,651 DEBUG [main] o.h.v.i.x.ResourceLoaderHelper [ResourceLoaderHelper.java : 54] Trying to load META-INF/validation.xml via TCCL
+2016-02-19 22:12:31,652 DEBUG [main] o.h.v.i.x.ResourceLoaderHelper [ResourceLoaderHelper.java : 60] Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2016-02-19 22:12:31,652 DEBUG [main] o.h.v.i.x.ValidationXmlParser [ValidationXmlParser.java : 98] No META-INF/validation.xml found. Using annotation based configuration only.
+2016-02-19 22:12:31,959 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java : 180] Starting service Tomcat
+2016-02-19 22:12:31,961 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java : 180] Starting Servlet Engine: Apache Tomcat/8.0.30
+2016-02-19 22:12:32,072 INFO [localhost-startStop-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java : 180] Initializing Spring embedded WebApplicationContext
+2016-02-19 22:12:32,708 DEBUG [main] o.h.v.i.e.r.DefaultTraversableResolver [DefaultTraversableResolver.java : 70] Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2016-02-19 22:12:32,708 DEBUG [main] o.h.v.i.e.ConfigurationImpl [ConfigurationImpl.java : 156] Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2016-02-19 22:12:32,708 DEBUG [main] o.h.v.i.e.ConfigurationImpl [ConfigurationImpl.java : 178] Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2016-02-19 22:12:32,709 DEBUG [main] o.h.v.i.e.ConfigurationImpl [ConfigurationImpl.java : 192] Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy47
+2016-02-19 22:12:32,709 DEBUG [main] o.h.v.i.x.ValidationXmlParser [ValidationXmlParser.java : 91] Trying to load META-INF/validation.xml for XML based Validator configuration.
+2016-02-19 22:12:32,710 DEBUG [main] o.h.v.i.x.ResourceLoaderHelper [ResourceLoaderHelper.java : 47] Trying to load META-INF/validation.xml via user class loader
+2016-02-19 22:12:32,710 DEBUG [main] o.h.v.i.x.ResourceLoaderHelper [ResourceLoaderHelper.java : 54] Trying to load META-INF/validation.xml via TCCL
+2016-02-19 22:12:32,710 DEBUG [main] o.h.v.i.x.ResourceLoaderHelper [ResourceLoaderHelper.java : 60] Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2016-02-19 22:12:32,711 DEBUG [main] o.h.v.i.x.ValidationXmlParser [ValidationXmlParser.java : 98] No META-INF/validation.xml found. Using annotation based configuration only.
+2016-02-19 22:12:33,487 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java : 180] Initializing ProtocolHandler ["http-nio-8080"]
+2016-02-19 22:12:33,496 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java : 180] Starting ProtocolHandler ["http-nio-8080"]
+2016-02-19 22:12:33,511 INFO [main] o.a.t.u.n.NioSelectorPool [DirectJDKLog.java : 180] Using a shared selector for servlet write/read
+2016-02-19 22:12:33,540 INFO [main] a.App [StartupInfoLogger.java : 57] Started App in 3.704 seconds (JVM running for 4.355)
+2016-02-19 22:12:41,957 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java : 180] Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-02-19 22:12:42,022 INFO [http-nio-8080-exec-1] a.c.AppController [AppController.java : 23] i am inside hello
+2016-02-19 22:12:42,023 DEBUG [http-nio-8080-exec-1] a.c.AppController [AppController.java : 24] i am inside hello debig
+2016-02-19 22:12:42,023 WARN [http-nio-8080-exec-1] a.c.AppController [AppController.java : 25] i am inside hello warn
+2016-02-19 22:12:42,023 ERROR [http-nio-8080-exec-1] a.c.AppController [AppController.java : 26] i am inside hello error
+2016-02-19 22:13:31,672 INFO [http-nio-8080-exec-1] a.c.AppController [AppController.java : 23] i am inside hello
+2016-02-19 22:13:31,675 DEBUG [http-nio-8080-exec-1] a.c.AppController [AppController.java : 24] i am inside hello debig
+2016-02-19 22:13:31,676 WARN [http-nio-8080-exec-1] a.c.AppController [AppController.java : 25] i am inside hello warn
+2016-02-19 22:13:31,676 ERROR [http-nio-8080-exec-1] a.c.AppController [AppController.java : 26] i am inside hello error

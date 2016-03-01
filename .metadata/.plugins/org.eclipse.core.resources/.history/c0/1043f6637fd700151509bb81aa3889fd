@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+ 
+    <appender name="TIME_BASED_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>hello.log</file>
+         <encoder>
+         	<patteren>%date %level [%thread] %logger{10} [%file : %line]</patteren>
+         </encoder>
+ 
+    </appender>
+ 	<logger name="org.springframework" level="error"/>
+    <logger name="advance.controller" level="debug"/>
+    <root level="warn">
+        <appender-ref ref="FILE" />
+        
+    </root>
+ 
+</configuration>

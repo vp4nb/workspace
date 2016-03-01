@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        
+       <bean id="simpleMovieFinder" class="com.bellinfo.b2.advanced.spring.SimpleMovieFinder">
+         <property name="movieFinder" ref="movieFinder"></property>
+       </bean>
+       
+       <bean id="movieFinder" class="com.bellinfo.b2.advanced.spring.MovieFinder">
+       
+       </bean>
+       
+       <bean id="lapDetails" class="com.bellinfo.b2.advanced.spring.LaptopDetails">
+       <constructor-arg type="java.lang.String" value="Dell" /> 
+       <constructor-arg type="int" value="500"/>
+       </bean>
+       
+        
+        
+ </beans>     

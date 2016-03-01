@@ -1,0 +1,19 @@
+package class9;
+
+public class ErrorScenario {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		method1();
+	}
+	
+	public static void method1()
+	{
+		System.out.println("inside method1");
+	}
+	public static void method2()
+	{
+		System.out.println("inside method2");
+	}
+
+}

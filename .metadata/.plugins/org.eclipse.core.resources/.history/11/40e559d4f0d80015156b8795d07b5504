@@ -1,0 +1,25 @@
+package advance;
+
+import org.springframework.aop.framework.ProxyFactoryBean;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	//target
+    	BankServiceImpl bsi= new BankServiceImpl();
+    	
+    	//advice
+    	LogBefore lb=new LogBefore();
+    	
+    	ProxyFactoryBean pfb=new ProxyFactoryBean();
+    	pfb.setTarget(bsi);
+    	pfb.addAdvice(lb);
+    	BankServiceImpl proxyBsi=(BankServiceImpl) pfb.getObject();
+        //System.out.println( "Hello World!" );
+    }
+}
